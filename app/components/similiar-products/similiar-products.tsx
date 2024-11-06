@@ -1,6 +1,12 @@
 import React from "react";
-import { Product } from "../cards/cards-grid/cards-grid";
 import ProductCard from "../cards/product-card/product-card";
+
+type Product = {
+  id: number;
+  title: string;
+  image: string;
+  price: string;
+};
 
 const RelatedProducts = async () => {
   const response = await fetch("https://fakestoreapi.com/products?limit=3");
@@ -14,6 +20,7 @@ const RelatedProducts = async () => {
       <div className="grid justify-center gap-4 grid-rows-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {similiarProducts.map((product) => (
           <ProductCard
+            id={product.id}
             key={product.id}
             title={product.title}
             image={product.image}
