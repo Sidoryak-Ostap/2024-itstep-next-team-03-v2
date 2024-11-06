@@ -5,7 +5,7 @@ type Product = {
   id: number;
   title: string;
   image: string;
-  price: string;
+  price: number;
 };
 
 const RelatedProducts = async () => {
