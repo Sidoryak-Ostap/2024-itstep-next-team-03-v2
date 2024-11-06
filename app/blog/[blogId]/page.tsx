@@ -94,6 +94,7 @@ const Blog = ({ params }: { params: { blogId: string } }) => {
                         title={product.title}
                         price={product.price}
                         image={product.image}
+                        id={product.id}
                       />
                     ))
                 ) : (
@@ -129,6 +130,7 @@ const Blog = ({ params }: { params: { blogId: string } }) => {
                   .map((product) => (
                     <ProductCard
                       key={product.id}
+                      id={product.id}
                       title={product.title}
                       price={product.price}
                       image={product.image}
@@ -170,6 +172,7 @@ const Blog = ({ params }: { params: { blogId: string } }) => {
                     .map((product) => (
                       <ProductCard
                         key={product.id}
+                        id={product.id}
                         title={product.title}
                         price={product.price}
                         image={product.image}
