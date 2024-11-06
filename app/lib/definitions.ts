@@ -15,7 +15,7 @@ export type Product = {
   quantity_available: number | null;
   image_url: string;
   custom_parameters: string | null;
-  attributes: Record<string, any> | null;
+  attributes: Record<string, string> | null;
   description: string | null;
 };
 
